@@ -34,8 +34,8 @@ createBooking('LH123', undefined, 1000);
 ///////////////////////////////////////
 // How Passing Arguments Works: Values vs. Reference
 const flight = 'LH234';
-const jonas = {
-  name: 'Jonas Schmedtmann',
+const dimitar = {
+  name: 'Dimitar Belchevn',
   passport: 24739479284,
 };
 
@@ -50,20 +50,20 @@ const checkIn = function (flightNum, passenger) {
   }
 };
 
-// checkIn(flight, jonas);
+// checkIn(flight, dimitar);
 // console.log(flight);
-// console.log(jonas);
+// console.log(dimitar);
 
 // Is the same as doing...
 // const flightNum = flight;
-// const passenger = jonas;
+// const passenger = dimitar;
 
 const newPassport = function (person) {
   person.passport = Math.trunc(Math.random() * 100000000000);
 };
 
-newPassport(jonas);
-checkIn(flight, jonas);
+newPassport(dimitar);
+checkIn(flight, dimitar);
 
 
 ///////////////////////////////////////
@@ -93,7 +93,7 @@ const high5 = function () {
   console.log('👋');
 };
 document.body.addEventListener('click', high5);
-['Jonas', 'Martha', 'Adam'].forEach(high5);
+['Dimitar', 'Martha', 'Adam'].forEach(high5);
 
 
 ///////////////////////////////////////
@@ -105,15 +105,15 @@ const greet = function (greeting) {
 };
 
 const greeterHey = greet('Hey');
-greeterHey('Jonas');
+greeterHey('Dimitar');
 greeterHey('Steven');
 
-greet('Hello')('Jonas');
+greet('Hello')('Dimitar');
 
 // Challenge
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
-greetArr('Hi')('Jonas');
+greetArr('Hi')('Dimitar');
 
 
 ///////////////////////////////////////
@@ -131,7 +131,7 @@ const lufthansa = {
   },
 };
 
-lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(239, 'Dimitar Belchevn');
 lufthansa.book(635, 'John Smith');
 
 const eurowings = {
@@ -178,7 +178,7 @@ const bookLX = book.bind(swiss);
 bookEW(23, 'Steven Williams');
 
 const bookEW23 = book.bind(eurowings, 23);
-bookEW23('Jonas Schmedtmann');
+bookEW23('Dimitar Belchevn');
 bookEW23('Martha Cooper');
 
 // With Event Listeners
@@ -218,7 +218,7 @@ console.log(addVAT2(23));
 ///////////////////////////////////////
 // Coding Challenge #1
 
-/* 
+/*
 Let's build a simple poll app!
 
 A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter object below.
@@ -233,10 +233,10 @@ Here are your tasks:
         2: Rust
         3: C++
         (Write option number)
-  
+
   1.2. Based on the input number, update the answers array. For example, if the option is 3, increase the value AT POSITION 3 of the array by 1. Make sure to check if the input is a number and if the number makes sense (e.g answer 52 wouldn't make sense, right?)
 2. Call this method whenever the user clicks the "Answer poll" button.
-3. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1". 
+3. Create a method 'displayResults' which displays the poll results. The method takes a string as an input (called 'type'), which can be either 'string' or 'array'. If type is 'array', simply display the results array as it is, using console.log(). This should be the default option. If type is 'string', display a string like "Poll results are 13, 2, 4, 1".
 4. Run the 'displayResults' method at the end of each 'registerNewAnswer' method call.
 
 HINT: Use many of the tools you learned about in this and the last section 😉

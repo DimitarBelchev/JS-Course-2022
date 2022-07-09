@@ -14,8 +14,8 @@ const Person = function (firstName, birthYear) {
   // };
 };
 
-const jonas = new Person('Jonas', 1991);
-console.log(jonas);
+const dimitar = new Person('Dimitar', 1991);
+console.log(dimitar);
 
 // 1. New {} is created
 // 2. function is called, this = {}
@@ -25,7 +25,7 @@ console.log(jonas);
 const matilda = new Person('Matilda', 2017);
 const jack = new Person('Jack', 1975);
 
-console.log(jonas instanceof Person);
+console.log(dimitar instanceof Person);
 
 Person.hey = function () {
   console.log('Hey there 👋');
@@ -41,31 +41,31 @@ Person.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
 };
 
-jonas.calcAge();
+dimitar.calcAge();
 matilda.calcAge();
 
-console.log(jonas.__proto__);
-console.log(jonas.__proto__ === Person.prototype);
+console.log(dimitar.__proto__);
+console.log(dimitar.__proto__ === Person.prototype);
 
-console.log(Person.prototype.isPrototypeOf(jonas));
+console.log(Person.prototype.isPrototypeOf(dimitar));
 console.log(Person.prototype.isPrototypeOf(matilda));
 console.log(Person.prototype.isPrototypeOf(Person));
 
 // .prototyeOfLinkedObjects
 
 Person.prototype.species = 'Homo Sapiens';
-console.log(jonas.species, matilda.species);
+console.log(dimitar.species, matilda.species);
 
-console.log(jonas.hasOwnProperty('firstName'));
-console.log(jonas.hasOwnProperty('species'));
+console.log(dimitar.hasOwnProperty('firstName'));
+console.log(dimitar.hasOwnProperty('species'));
 
 
 ///////////////////////////////////////
 // Prototypal Inheritance on Built-In Objects
-console.log(jonas.__proto__);
+console.log(dimitar.__proto__);
 // Object.prototype (top of prototype chain)
-console.log(jonas.__proto__.__proto__);
-console.log(jonas.__proto__.__proto__.__proto__);
+console.log(dimitar.__proto__.__proto__);
+console.log(dimitar.__proto__.__proto__.__proto__);
 
 console.dir(Person.prototype.constructor);
 
@@ -192,7 +192,7 @@ const walter = new PersonCl('Walter White', 1965);
 ///////////////////////////////////////
 // Setters and Getters
 const account = {
-  owner: 'Jonas',
+  owner: 'Dimitar',
   movements: [200, 530, 120, 300],
 
   get latest() {
@@ -548,7 +548,7 @@ class Account {
   }
 }
 
-const acc1 = new Account('Jonas', 'EUR', 1111);
+const acc1 = new Account('Dimitar', 'EUR', 1111);
 
 // acc1._movements.push(250);
 // acc1._movements.push(-140);

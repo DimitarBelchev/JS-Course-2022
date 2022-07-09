@@ -128,9 +128,9 @@ document.querySelector('button').addEventListener('click', function () {
 
 // Split and join
 console.log('a+very+nice+string'.split('+'));
-console.log('Jonas Schmedtmann'.split(' '));
+console.log('Dimitar Belchevn'.split(' '));
 
-const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+const [firstName, lastName] = 'Dimitar Belchevn'.split(' ');
 
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 console.log(newName);
@@ -147,12 +147,12 @@ const capitalizeName = function (name) {
 };
 
 capitalizeName('jessica ann smith davis');
-capitalizeName('jonas schmedtmann');
+capitalizeName('dimitar belchevn');
 
 // Padding
 const message = 'Go to gate 23!';
 console.log(message.padStart(20, '+').padEnd(30, '+'));
-console.log('Jonas'.padStart(20, '+').padEnd(30, '+'));
+console.log('Dimitar'.padStart(20, '+').padEnd(30, '+'));
 
 const maskCreditCard = function (number) {
   const str = number + '';
@@ -185,15 +185,15 @@ console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
 // Fix capitalization in name
-const passenger = 'jOnAS'; // Jonas
+const passenger = 'jOnAS'; // Dimitar
 const passengerLower = passenger.toLowerCase();
 const passengerCorrect =
   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 console.log(passengerCorrect);
 
 // Comparing emails
-const email = 'hello@jonas.io';
-const loginEmail = '  Hello@Jonas.Io \n';
+const email = 'hello@dimitar.io';
+const loginEmail = '  Hello@Dimitar.Io \n';
 
 // const lowerEmail = loginEmail.toLowerCase();
 // const trimmedEmail = lowerEmail.trim();
@@ -276,10 +276,10 @@ checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
-console.log(new String('jonas'));
-console.log(typeof new String('jonas'));
+console.log(new String('dimitar'));
+console.log(typeof new String('dimitar'));
 
-console.log(typeof new String('jonas').slice(1));
+console.log(typeof new String('dimitar').slice(1));
 */
 
 ///////////////////////////////////////
@@ -419,7 +419,7 @@ const ordersSet = new Set([
 ]);
 console.log(ordersSet);
 
-console.log(new Set('Jonas'));
+console.log(new Set('Dimitar'));
 
 console.log(ordersSet.size);
 console.log(ordersSet.has('Pizza'));
@@ -441,7 +441,7 @@ console.log(
   new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
 );
 
-console.log(new Set('jonasschmedtmann').size);
+console.log(new Set('dimitarbelchevn').size);
 */
 
 ///////////////////////////////////////
@@ -591,7 +591,7 @@ console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
 
 // Arrays
-const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+const users = [{ name: 'Dimitar', email: 'hello@dimitar.io' }];
 // const users = [];
 
 console.log(users[0]?.name ?? 'User array empty');
@@ -719,8 +719,8 @@ console.log(guestCorrect);
 
 console.log('---- OR ----');
 // Use ANY data type, return ANY data type, short-circuiting
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
+console.log(3 || 'Dimitar');
+console.log('' || 'Dimitar');
 console.log(true || 0);
 console.log(undefined || null);
 
@@ -734,10 +734,10 @@ const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
 console.log('---- AND ----');
-console.log(0 && 'Jonas');
-console.log(7 && 'Jonas');
+console.log(0 && 'Dimitar');
+console.log(7 && 'Dimitar');
 
-console.log('Hello' && 23 && null && 'jonas');
+console.log('Hello' && 23 && null && 'dimitar');
 
 // Practical example
 if (restaurant.orderPizza) {
@@ -810,11 +810,11 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
 // Iterables: arrays, strings, maps, sets. NOT objects
-const str = 'Jonas';
+const str = 'Dimitar';
 const letters = [...str, ' ', 'S.'];
 console.log(letters);
 console.log(...str);
-// console.log(`${...str} Schmedtmann`);
+// console.log(`${...str} Belchevn`);
 
 // Real-world example
 const ingredients = [

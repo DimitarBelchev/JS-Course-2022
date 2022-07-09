@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////
 // Data
 const account1 = {
-  owner: 'Jonas Schmedtmann',
+  owner: 'Dimitar Belchevn',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -76,9 +76,8 @@ const displayMovements = function (movements, sort = false) {
 
     const html = `
       <div class="movements__row">
-        <div class="movements__type movements__type--${type}">${
-      i + 1
-    } ${type}</div>
+        <div class="movements__type movements__type--${type}">${i + 1
+      } ${type}</div>
         <div class="movements__value">${mov}€</div>
       </div>
     `;
@@ -151,9 +150,8 @@ btnLogin.addEventListener('click', function (e) {
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     // Display UI and message
-    labelWelcome.textContent = `Welcome back, ${
-      currentAccount.owner.split(' ')[0]
-    }`;
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]
+      }`;
     containerApp.style.opacity = 100;
 
     // Clear input fields
@@ -286,8 +284,8 @@ console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 console.log(arr.at(-1));
 
-console.log('jonas'.at(0));
-console.log('jonas'.at(-1));
+console.log('dimitar'.at(0));
+console.log('dimitar'.at(-1));
 
 
 ///////////////////////////////////////
@@ -592,7 +590,7 @@ console.log(overalBalance2);
 // Sorting Arrays
 
 // Strings
-const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+const owners = ['Dimitar', 'Zach', 'Adam', 'Martha'];
 console.log(owners.sort());
 console.log(owners);
 
