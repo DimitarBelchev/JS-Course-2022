@@ -1,1 +1,1 @@
-JS 2022 Refresh
+JS 2022 Course Refresh
